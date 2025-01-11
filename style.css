@@ -11,7 +11,7 @@ body {
     background-position: center;
     font-family: "Righteous", serif;
 }
-
+/* nav bar */
 nav {
     background-color: pink;
     box-shadow: 2px 2px 4px #bc05cdc6;
@@ -40,4 +40,104 @@ nav a {
 
 nav a:hover {
     background-color: aliceblue;
+}
+/* main */
+.main {
+    margin: 250px 200px;
+}
+h1 {
+    color: antiquewhite;
+    font-size: 5rem;
+}
+
+p {
+    color: antiquewhite;
+    font-size: 1.5rem;
+}
+
+h2, h3 {
+    margin: 20px 0;
+    color: antiquewhite;
+    font-size: 1.5rem;
+}
+/* projects */
+.projects {
+display: flex;
+justify-content: center ;
+font-size: 1.5rem;
+}
+
+.projects__a  {
+        -webkit-box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67); 
+        box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67);
+        }
+.projects__a {
+    background-color: pink;
+    display: block;
+    margin: 50px auto 0;
+    width: 300px;
+    height: 400px;
+    color: #FFF;
+    padding: 10px;
+   }
+.projects__b {
+    -webkit-box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67); 
+    box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67);
+    }
+.projects__b {
+        background-color: pink;
+        display: block;
+        margin: 50px auto 0;
+        width: 300px;
+        height: 400px;
+        color: #FFF;
+        padding: 10px;
+       }
+.projects__c {
+        -webkit-box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67); 
+        box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67);
+        }
+.projects__c {
+            background-color: pink;
+            display: block;
+            margin: 50px auto 0;
+            width: 300px;
+            height: 400px;
+            color: #FFF;
+            padding: 10px;
+           }
+/* contacts */
+.contacts {
+            display: flex;
+            justify-content: center ;
+            }
+        .contacts__box {
+                -webkit-box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67); 
+                box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67);
+                }
+        .contacts__box {
+                    background-color: pink;
+                    display: block;
+                    margin: 50px auto 0;
+                    width: 800px;
+                    height: 400px;
+                    color: #FFF;
+                    padding: 10px;
+                   }
+/* animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.projects, .contacts {
+animation: appear linear;
+animation-timeline: view();
+animation-range: entry 0% cover 40%;
 }
