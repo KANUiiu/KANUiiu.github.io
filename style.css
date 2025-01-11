@@ -14,7 +14,6 @@ body {
 /* nav bar */
 nav {
     background-color: pink;
-    box-shadow: 2px 2px 4px #bc05cdc6;
 }  
 
 nav ul {
@@ -41,6 +40,31 @@ nav a {
 nav a:hover {
     background-color: aliceblue;
 }
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 192, 203, 0.708);
+    backdrop-filter: blur(5px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
 /* main */
 .main {
     margin: 250px 200px;
@@ -55,7 +79,7 @@ p {
     font-size: 1.5rem;
 }
 
-h2, h3 {
+.projects__title, .contacts__title {
     margin: 20px 0;
     color: antiquewhite;
     font-size: 1.5rem;
@@ -124,6 +148,22 @@ font-size: 1.5rem;
                     color: #FFF;
                     padding: 10px;
                    }
+        .menu-botton {
+            display: none;
+        }
+ @media(max-width: 800px){
+                    .hideOnMobile{
+                        display: none;
+                    }
+                    .menu-botton{
+                        display: block;
+                    }
+                }
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
 /* animation */
 @keyframes appear {
     from {
@@ -141,3 +181,4 @@ animation: appear linear;
 animation-timeline: view();
 animation-range: entry 0% cover 40%;
 }
+

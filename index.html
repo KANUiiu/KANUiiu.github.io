@@ -12,11 +12,20 @@
 <body>
 <!-- Navigation bar-->
     <nav>
-        <ul>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(8, 40, 146, 0.42)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="#">About Me</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contacts</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">LOGO</a></li>
+            <li class="hideOnMobile"><a href="#">Menu</a></li>
+            <li class="hideOnMobile"><a href="#">About Me</a></li>
+            <li class="hideOnMobile"><a href="#">Projects</a></li>
+            <li class="hideOnMobile"><a href="#">Contacts</a></li>
+            <li class="menu-botton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(8, 40, 146, 0.42)"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg></a></li>
         </ul>
     </nav>
 <!-- Main design -->
@@ -26,15 +35,26 @@
     </div>
 <!-- Projects -->
     <div class="projects">
-    <div><h2>My Projects</h2></div>
+    <div class="projects__title">My Projects</div>
     <div class="projects__a"></div>
     <div class="projects__b"></div>
     <div class="projects__c"></div>
     </div>
 <!-- Contacts -->
 <div class="contacts">
-    <h3>Contacts</h3>
+    <div class="contacts__title">Contacts</div>
     <div class="contacts__box"></div>
     </div>
+<!-- To show sidebar -->
+<script>
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
+</script>
 </body>
 </html>
