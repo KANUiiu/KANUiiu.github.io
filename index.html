@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Gochi+Hand&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Gochi+Hand&family=LXGW+WenKai+Mono+TC&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- Navigation bar-->
     <nav>
         <ul class="sidebar">
-            <div class="sidebar-items">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(8, 40, 146, 0.42)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="#">About Me</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#">My Projects</a></li>
             <li><a href="#">Contacts</a></li>
         </ul>
      
         <ul>
             <li class="menu-botton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(8, 40, 146, 0.42)"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg></a></li>
             <li class="hideOnMobile"><a href="#">About Me</a></li>
-            <li class="hideOnMobile"><a href="#">Projects</a></li>
-            <li class="hideOnMobile"><a href="#">Contacts</a></li> 
+            <li class="hideOnMobile"><a href="#">My Projects</a></li>
+            <li class="hideOnMobile" onmouseover="hideLangMenu()"><a href="#">Contacts</a></li> 
             <li id="lang" onclick=showLangMenu()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="rgba(8, 40, 146, 0.42)"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg></a></li>
         </ul>
         <!--  Lang Menu -->
@@ -32,30 +31,40 @@
             <a onclick=hideLangMenu() href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(8, 40, 146, 0.42)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
             <a href="#" language="english" class="active">English</a>
             <a href="#" language="taiwanese">Tâi-oân-ōe</a>
-            <a href="#" language="chinese">中</a>
+            <a href="#" language="chinese">中國語</a>
         </div>
     </nav>
 <!-- Main design -->
-    <div class="main">
+    <div class="main" onmouseover="hideLangMenu()">
         <div class="main-left">
             <div class="title">This is Uiiu.</div>
             <div class="caption">I'm here to build what you imagine.</div>
         </div>
         <div class="main-right">
-            <img src="images/dance__a.png" alt="dance" class="dance" />
         </div>
     </div>
 <!-- Projects --> 
-    <div class="projects__title" id="projects__title">My Projects</div>
-    <div class="projects">
-    <div class="projects__a"></div>
-    <div class="projects__b"></div>
-    <div class="projects__c"></div>
+    <div class="projects__title" id="projects__title" onmouseover="hideLangMenu()">My Projects</div>
+    <div class="projects" onmouseover="hideLangMenu()">
+    <div class="projects__a">
+        <h1 class="projects__a__tilte">Project A</h1>
+        <p class="projects__a__description">This is Project A.</p>
+    </div>
+    <div class="projects__b">
+        <h1 class="projects__b__tilte">Project B</h1>
+        <p class="projects__b__description">This is Project B.</p>
+    </div>
+    <div class="projects__c">
+        <h1 class="projects__c__tilte">Project C</h1>
+        <p class="projects__c__description">This is Project C.</p>
+    </div>
     </div>
 <!-- Contacts -->
-<div class="contacts">
-    <div class="contacts__title">Contacts</div>
-    <div class="contacts__box"></div>
+<div class="contacts__title" onmouseover="hideLangMenu()">Contacts</div>
+<div class="contacts" onmouseover="hideLangMenu()">
+    <div class="contacts__box">
+        <p class="contacts__box__description">The information will be updated soon.</p>
+    </div>
     </div>
 <!-- JS -->
 <script src="index.js"></script>

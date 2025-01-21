@@ -68,6 +68,10 @@ nav li:last-child {
 }
 
 /* lang side menu */
+#lang {
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 /* lang menu */
@@ -76,7 +80,7 @@ nav li:last-child {
     top: 40px;
     right: 0;
     height: 150px;
-    width: 180px;
+    width: 140px;
     z-index: 999;
     background-color: rgba(255, 192, 203, 0.708);
     backdrop-filter: blur(5px);
@@ -103,7 +107,7 @@ nav li:last-child {
 
 /* main */
 .main {
-    margin: 200px 100px;
+    margin: 250px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +120,7 @@ nav li:last-child {
 }
 .title {
     color: antiquewhite;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .caption {
@@ -129,10 +133,6 @@ nav li:last-child {
     font-size: 1.5rem;
 }
 
-img {
-    width: 350px;
-    mix-blend-mode: color-burn;
-}
 /* projects */
 .projects {
 display: flex;
@@ -159,8 +159,9 @@ margin: 30px 50px;
     margin: 20px auto 0;
     width: 300px;
     height: 400px;
-    color: #FFF;
+    color: #1e2f69dd;
     padding: 10px;
+    border-radius: 10px;
    }
 .projects__b {
     -webkit-box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67); 
@@ -168,12 +169,13 @@ margin: 30px 50px;
     }
 .projects__b {
         background-color: pink;
+        color: #1e2f69dd;
         display: block;
         margin: 20px 50px;
         width: 300px;
         height: 400px;
-        color: #FFF;
         padding: 10px;
+        border-radius: 10px;
        }
 .projects__c {
         -webkit-box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.67); 
@@ -181,18 +183,25 @@ margin: 30px 50px;
         }
 .projects__c {
             background-color: pink;
+            color: #1e2f69dd;
             display: block;
             margin: 20px auto 0;
             width: 300px;
             height: 400px;
-            color: #FFF;
             padding: 10px;
+            border-radius: 10px;    
            }
 /* contacts */
+.contacts__title {
+    display: flex;
+    justify-content: left ;
+    margin: 0px 50px;
+    color: antiquewhite;
+    }
 .contacts {
             display: flex;
             justify-content: center ;
-            margin: 100px 50px;
+            margin: 20px 20px;
             color: antiquewhite;
             }
         .contacts__box {
@@ -202,16 +211,52 @@ margin: 30px 50px;
         .contacts__box {
                     background-color: pink;
                     display: block;
-                    margin: 80px auto 0;
+                    margin: 20px auto 0;
                     width: 800px;
                     height: 400px;
-                    color: #FFF;
+                    color: #1e2f69dd;
                     padding: 10px;
+                    border-radius: 10px;
                    }
         .menu-botton {
             display: none;
         }
- @media(max-width: 800px){
+ 
+
+        @media(max-width: 900px){
+          
+            .projects {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                border: 100px;
+                margin: 30px 50px;
+                }
+        }
+
+@media(max-width: 800px){
+          
+            .title {
+                font-size: 6vw;
+            }
+            .caption {
+                font-size: 2.5vw;
+            }
+        }
+
+@media(max-width: 700px){
+          
+            .title {
+                font-size: 7vw;
+            }
+            .caption {
+                font-size: 3vw;
+            }
+        }
+ 
+@media(max-width: 600px){
                     .hideOnMobile{
                         display: none;
                     }
@@ -219,18 +264,33 @@ margin: 30px 50px;
                         display: block;
                     }
                     .title {
-                        font-size: 5vw;
-                    }
-                    .main-right img {
-                        width: 35vw;
+                        font-size: 10vw;
                     }
                     .caption {
-                        font-size: 1.4vw;
+                        font-size: 4vw;
                     }
                 }
-@media(max-width: 400px){
+                
+@media(max-width: 500px){
     .sidebar{
-        width: 100%;
+        width: 100%;}
+    .title {
+            font-size: 10vw;
+        }
+    .caption {
+            font-size: 4vw;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        border: 50px;
+        margin: 30px 10px;
+        }
+    .projects__c.projects__b.projects__a {
+        width: 250px;
     }
 }
 /* animation */
